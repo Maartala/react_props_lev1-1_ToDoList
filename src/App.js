@@ -1,23 +1,43 @@
-import logo from './logo.svg';
+import Todo from './components/Todo';
 import './App.css';
+
+const todoArr = [
+  {
+    item: "Bug Grocery"
+  },
+  {
+    item: "Send Email"
+  },
+  {
+    item: "Finish Assignement"
+  },
+  {
+    item: "Write Blog"
+  },
+  {
+    item: "Bake Cake"
+  }
+]
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>My Todos</h1>
+      <Todo
+        item={todoArr[0].item}
+      />
+      <Todo
+        item={todoArr[1].item}
+      />
+      <Todo
+        item={todoArr[2].item}
+      />
+      <Todo
+        item={todoArr[3].item}
+      />
+      <Todo
+        item={todoArr[4].item}
+      />
     </div>
   );
 }
